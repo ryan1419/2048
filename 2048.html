@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2048</title>
+    <link rel="stylesheet" href="css/css.css"/>
+    <script src="script/jquery-1.11.3.js"></script>
+    <script src="trianglify-master/dist/trianglify.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div id="mask"></div>
+        <div id="title_con">
+            <div id="title">
+                <div id="big_title2048">2048</div>
+                <div id="reissue">Tang MuSen</div>
+            </div>
+            <div id="best_con">
+                <div>BEST</div>
+                <div id="best_score">59604</div>
+            </div>
+            <div id="score_con">
+                <div>SCORE</div>
+                <div id="score">0</div>
+                <div id="add_score_con">
+                    <span>+</span>
+                    <span id="add_score">123</span>
+                </div>
+            </div>
+            <div id="options">OPTIONS</div>
+            <div id="restart_curr">RESTART</div>
+        </div>
+        <p id="game_tip">Join the numbers and get to the 2048 tile!</p>
+        <div id="game_con">
+            <i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i>
+            <b></b><b></b><b></b><b></b>
+            <b></b><b></b><b></b><b></b>
+            <b></b><b></b><b></b><b></b>
+            <b></b><b></b><b></b><b></b>
+        </div>
+        <div id=game_over_con>
+            <div id="final_score_con">
+                <div id="final_score_title">YOU SCORE</div>
+                <div id="final_score">2048</div>
+            </div>
+            <div id="game_over_title">GAME OVER</div>
+            <div id="restart_con">
+                <a id="restart" href="javascript:void(0)">Restart</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="start_game">
+        <div class="start_title_con">
+            <!-- 正面 -->
+            <div id="start_game_title1">2048</div>
+            <div id="start_game_title2">Tang MuSen</div>
+            <!-- 反面 -->
+            <div id="htpb_text_con" style="display: none;">
+                <div id="ex">SWIPE AND MATCH SAME NUMBER,REACH 2048!</div>
+                <div>
+                    <div><span class="htpb">2</span><span class="fh">+</span><span class="htpb">2</span><span class="fh">=</span><span style="background: #ede0c8;" class="htpb">4</span></div>
+                    <div><span style="background: #ede0c8;" class="htpb">4</span><span class="fh">+</span><span style="background: #ede0c8;" class="htpb">4</span><span class="fh">=</span><span style="background: #f2b179;color:#FFF;" class="htpb">8</span></div>
+                    <div><span style="background: #f2b179;color:#FFF;" class="htpb">8</span><span class="fh">+</span><span style="background: #f2b179;color:#FFF;" class="htpb">8</span><span class="fh">=</span><span style="background: #f59563;color:#FFF;" class="htpb">16</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="lets_play" id="lets_play">PLAY !</div>
+        <div class="how_to_play" id="how_to_play">HOW TO PLAY?</div>
+
+
+        <div class="restart_ask">
+            <div id="restart_ask_title">RESTART</div>
+            <div id="restart_ask_info">WOULD YOU LIKE TO RESTART THE GAME?</div>
+        </div>
+        <div class="restart_yes" id="restart_yes">YES - RESTART</div>
+        <div class="restart_no" id="restart_no">NO - CONTINUE</div>
+    </div>
+
+
+
+
+
+    <script src="script/js.js"></script>
+    <script>
+        var pattern = new Trianglify({
+            width: window.innerWidth,
+            height: window.innerHeight
+        });
+        document.body.appendChild(pattern.canvas());
+    </script>
+</body>
+</html>
